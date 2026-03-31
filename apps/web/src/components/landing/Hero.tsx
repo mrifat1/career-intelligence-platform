@@ -1,57 +1,33 @@
 import Link from "next/link";
 import { Button } from "@repo/ui";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Search } from "lucide-react";
 
 export function Hero() {
     return (
-        <div className="relative bg-gradient-to-b from-blue-50 to-white pt-20 pb-32">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center">
-                    {/* Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-8">
-                        <Sparkles className="h-4 w-4" />
-                        <span>AI-Powered Career Intelligence</span>
-                    </div>
+        <div className="relative bg-[#050510] pt-12 pb-10 overflow-hidden border-b border-white/5">
+            {/* Background Effects */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+                <div className="absolute top-[-20%] left-[-10%] w-[40%] h-[60%] bg-blue-600/10 blur-[120px] rounded-full" />
+                <div className="absolute bottom-[10%] right-[-10%] w-[40%] h-[60%] bg-purple-600/10 blur-[120px] rounded-full" />
+            </div>
 
-                    {/* Main Heading */}
-                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                        Your Career Journey,
-                        <br />
-                        <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
-                            Powered by Intelligence
-                        </span>
-                    </h1>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h1 className="text-3xl sm:text-5xl font-black text-white mb-6 tracking-tighter">
+                    Resource<span className="text-blue-500">Hub</span>
+                </h1>
 
-                    {/* Subheading */}
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                        Discover company insights, prepare for interviews with AI, explore verified salaries,
-                        and connect with a community of professionals—all in one platform.
-                    </p>
-
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <Link href="/register">
-                            <Button className="h-14 px-8 text-lg rounded-lg bg-blue-600 hover:bg-blue-700 text-white shadow-lg flex items-center gap-2 w-full sm:w-auto">
-                                Get Started Free
-                                <ArrowRight className="h-5 w-5" />
-                            </Button>
-                        </Link>
-                        <Link href="/companies">
-                            <Button className="h-14 px-8 text-lg rounded-lg bg-white text-gray-700 border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 w-full sm:w-auto">
-                                Explore Companies
-                            </Button>
-                        </Link>
-                    </div>
-
-                    {/* Trust Indicators */}
-                    <div className="mt-16 pt-8 border-t border-gray-200">
-                        <p className="text-sm text-gray-500 mb-4">Trusted by professionals at</p>
-                        <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400">
-                            <span className="text-2xl font-semibold">Google</span>
-                            <span className="text-2xl font-semibold">Microsoft</span>
-                            <span className="text-2xl font-semibold">Amazon</span>
-                            <span className="text-2xl font-semibold">Meta</span>
-                        </div>
+                <div className="max-w-xl mx-auto relative group">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <div className="relative flex items-center bg-gray-900/80 backdrop-blur-md border border-white/10 rounded-xl p-1.5 pl-5">
+                        <Search className="text-gray-500 h-4 w-4" />
+                        <input
+                            type="text"
+                            placeholder="অ্যালগরিদম বা রিয়্যাক্ট খুঁজুন..."
+                            className="bg-transparent border-none focus:ring-0 text-white flex-1 px-3 text-base placeholder:text-gray-600"
+                        />
+                        <Button className="h-10 px-6 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold shadow-lg flex items-center gap-2 transition-all">
+                            Search
+                        </Button>
                     </div>
                 </div>
             </div>

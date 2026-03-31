@@ -3,12 +3,90 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
   url      = env("DATABASE_URL")
+  provider = "postgresql"
 }
 
 model User {
-  id    String @id @default(cuid())
-  email String @unique
+  id    String  @id @default(cuid())
+  email String  @unique
   name  String?
+}
+
+model Resource {
+  id           String       @id @default(cuid())
+  title        String
+  author       String? // e.g., "Tamim Shahriar Subeen"
+  description  String?
+  url          String       @unique
+  type         ResourceType @default(OTHER)
+  language     Language     @default(BANGLA)
+  difficulty   Difficulty   @default(BEGINNER)
+  thumbnailUrl String?
+  isFeatured   Boolean      @default(false)
+
+  // Paid resource related fields
+  isPaid   Boolean  @default(false)
+  price    Decimal? @db.Decimal(10, 2)
+  currency String?  @default("BDT")
+
+  categories Category[]
+  techStacks TechStack[]
+  paths      Path[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category {
+  id          String  @id @default(cuid())
+  name        String  @unique
+  slug        String  @unique
+  description String?
+  isFeatured  Boolean @default(false) // For highlighting sections or carousels
+
+  // Self-relation for Sectors and Sub-categories (e.g. "Web Development" -> "React")
+  parentId String?
+  parent   Category?  @relation("CategoryToCategory", fields: [parentId], references: [id])
+  children Category[] @relation("CategoryToCategory")
+
+  resources Resource[]
+}
+
+model TechStack {
+  id          String     @id @default(cuid())
+  name        String     @unique
+  slug        String     @unique
+  description String?
+  resources   Resource[]
+}
+
+model Path {
+  id        String     @id @default(cuid())
+  name      String     @unique // e.g., "University Core", "Competitive Programming"
+  slug      String     @unique
+  order     Int        @default(0)
+  resources Resource[]
+}
+
+enum ResourceType {
+  VIDEO_SERIES
+  BLOG_POST
+  BOOK
+  INTERACTIVE_COURSE
+  GITHUB_REPO
+  PODCAST
+  COURSE // Added for future paid courses
+  OTHER
+}
+
+enum Language {
+  BANGLA
+  ENGLISH
+}
+
+enum Difficulty {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
 }

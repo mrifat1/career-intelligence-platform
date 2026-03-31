@@ -1,0 +1,17 @@
+[
+  { "title": "জাভাস্ক্রিপ্ট টিউটোরিয়াল", "author": "How-to-code", "url": "http://js.howtocode.dev/", "topics": ["javascript"], "type": "INTERACTIVE_COURSE" },
+  { "title": "রিয়েক্ট জেএস লার্ন উইথ সুমিত", "author": "সুমিত সাহা", "url": "https://www.youtube.com/user/sumitanalyzen", "topics": ["frontend"], "type": "VIDEO_SERIES" },
+  { "title": "জাভাস্ক্রিপ্ট - আবু আশরাফ মাসনুন", "author": "আবু আশরাফ মাসনুন", "url": "http://masnun.com/tutorials", "topics": ["javascript"], "type": "BLOG_POST" },
+  { "title": "নতুন করে শিখি জাভাস্ক্রিপ্ট", "author": "MDN", "url": "https://developer.mozilla.org/bn-BD/docs/Web/JavaScript/A_re-introduction_to_JavaScript", "topics": ["javascript"], "type": "BLOG_POST" },
+  { "title": "হাতেকলমে জাভাস্ক্রিপ্ট", "author": "Learn With Zonayed", "url": "https://js.zonayed.me", "topics": ["javascript"], "type": "BOOK" },
+  { "title": "পিএইচপি ডাউনলোড অ্যান্ড টিউটোরিয়াল", "author": "How-to-code", "url": "https://php.howtocode.dev/", "topics": ["backend-langs"], "type": "BLOG_POST" },
+  { "title": "বাংলায় গো-ল্যাং (golang)", "author": "How-to-code", "url": "https://golang.howtocode.dev/", "topics": ["backend-langs"], "type": "BLOG_POST" },
+  { "title": "পাইথন প্রোগ্রামিং", "author": "তামিম শাহরিয়ার সুবীন", "url": "http://pybook.subeen.com/", "topics": ["python"], "type": "BOOK" },
+  { "title": "মেশিন লার্নিং শুরুর কথা", "author": "শরিফ হাসান", "url": "https://iishanto.com/2020/07/22/%e0%a6%ae%e0%a7%87%e0%a6%b6%e0%a6%bf%e0%a6%a8-%e0%a6%b2%e0%a6%be%e0%a6%b0%e0%a7%8d%e0%a6%a8%e0%a6%bf%e0%a6%82-%e0%a7%a7-%e0%a6%b6%e0%a7%81%e0%a6%b0%e0%a7%81%e0%a6%b0-%e0%a6%95%e0%a6%a5%e0%a6%be/", "topics": ["ml"], "type": "BLOG_POST" },
+  { "title": "ডিপ লার্নিং ও আর্টিফিশিয়াল নিউরাল নেটওয়ার্ক", "author": "নুহিল মেহেদী", "url": "https://dl.howtocode.dev/", "topics": ["ml"], "type": "BOOK" },
+  { "title": "হাতেকলমে এনএলপি (NLP)", "author": "রকিবুল হাসান", "url": "https://github.com/raqueeb/nlp_bangla", "topics": ["nlp"], "type": "GITHUB_REPO" },
+  { "title": "বাংলায় ডার্ট ও ফ্লাটার বেসিক", "author": "রাব্বিল হাসান", "url": "https://www.youtube.com/playlist?list=PLkyGuIcLcmx1mIPyMdVodlSVJqL7Y9Wv7", "topics": ["flutter"], "type": "VIDEO_SERIES" },
+  { "title": "অ্যান্ড্রয়েড অ্যাপ ডেভেলপমেন্ট", "author": "মোশাররফ রুবেল", "url": "http://mrubel.com/androidlime/category/android/", "topics": ["native-mobile"], "type": "BLOG_POST" },
+  { "title": "ডাটাবেজ নরমালাইজেশন", "author": "মোঃ শফিউজ্জামান রাজিব", "url": "http://subeen.com/%E0%A6%A8%E0%A6%B0%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%9C%E0%A7%87%E0%A6%B6%E0%A6%A8-%E0%A6%A1%E0%A6%BE%E0%A6%9F%E0%A6%BE%E0%A6%AB%E0%A7%87%E0%A6%9C/", "topics": ["databases"], "type": "BLOG_POST" },
+  { "title": "ডাটাবেজ ট্রানজেকশন ও এসিড (ACID)", "author": "মোঃ শফিউজ্জামান রাজিব", "url": "http://subeen.com/%e0%a6%a1%e0%a6%be%e0%a6%9f%e0%a6%be%e0%a6%ac%e0%a7%87%e0%a6%9c-%e0%a6%9f%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%a8%e0%a6%9c%e0%a7%87%e0%a6%95%e0%a6%b6%e0%a6%a8-%e0%a6%93-%e0%a6%8f%e0%a6%b8%e0%a6%bf/", "topics": ["databases"], "type": "BLOG_POST" }
+]

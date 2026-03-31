@@ -4,30 +4,32 @@ import { Button } from "@repo/ui";
 
 export function NavBar() {
     return (
-        <nav className="sticky top-0 w-full z-50 bg-white border-b border-gray-200">
+        <nav className="sticky top-0 w-full z-50 bg-[#050510]/80 backdrop-blur-xl border-b border-white/5">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
+                <div className="flex justify-between items-center h-20">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center">
-                        <span className="text-2xl font-bold text-gray-900">Career<span className="text-blue-600">Intell</span></span>
+                    <Link href="/" className="flex items-center group">
+                        <span className="text-2xl font-black text-white tracking-tighter group-hover:text-blue-400 transition-colors">
+                            Pathshala<span className="text-blue-500">.io</span>
+                        </span>
                     </Link>
 
                     {/* Navigation Links */}
-                    <div className="hidden md:flex items-center space-x-8">
-                        <Link href="/companies" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                            Companies
+                    <div className="hidden md:flex items-center space-x-10">
+                        <Link href="/resources" className="text-gray-400 hover:text-white font-semibold text-sm transition-colors uppercase tracking-widest">
+                            Resources
                         </Link>
-                        <Link href="/jobs" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                            Jobs
+                        <Link href="/career-tracks" className="text-gray-400 hover:text-white font-semibold text-sm transition-colors uppercase tracking-widest">
+                            Career Tracks
                         </Link>
-                        <Link href="/interview-prep" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                            Interview Prep
+                        <Link href="/mentorship" className="text-gray-400 hover:text-white font-semibold text-sm transition-colors uppercase tracking-widest">
+                            Mentorship
                         </Link>
-                        <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+                        <Link href="/login" className="text-gray-400 hover:text-white font-semibold text-sm transition-colors uppercase tracking-widest">
                             Log in
                         </Link>
                         <Link href="/register">
-                            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-6 h-10">
+                            <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl px-8 h-12 font-bold shadow-lg shadow-blue-900/20 transition-all active:scale-95">
                                 Get Started
                             </Button>
                         </Link>
