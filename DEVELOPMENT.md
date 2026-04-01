@@ -17,8 +17,9 @@ ResourceHub is a curated platform for high-quality Bangla programming resources.
 ```
 .
 ├── apps/
-│   ├── web/                # Next.js frontend
-│   └── backend/            # NestJS backend API
+│   ├── web/                # Next.js frontend (3000)
+│   ├── admin/              # Next.js admin panel (3002)
+│   └── backend/            # NestJS backend API (3001)
 ├── packages/
 │   ├── database/           # Prisma schema and shared DB client
 │   ├── ui/                 # Shared React components (Tailwind-based)
@@ -37,8 +38,8 @@ pnpm install
 Ensure you have a PostgreSQL instance running and update the `.env` file in `packages/database`.
 
 ```bash
-# Push schema and generate client
-pnpm --filter @repo/database db:push
+# Migrate database and generate client
+pnpm --filter @repo/database db:migrate
 
 # Seed the database with resources
 pnpm --filter @repo/database db:seed
@@ -49,6 +50,7 @@ pnpm --filter @repo/database db:seed
 pnpm dev
 ```
 - **Web**: http://localhost:3000
+- **Admin**: http://localhost:3002
 - **API**: http://localhost:3001
 
 ## Content Architecture

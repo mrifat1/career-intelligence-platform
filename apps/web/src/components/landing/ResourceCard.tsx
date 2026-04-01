@@ -32,46 +32,41 @@ const DIFFICULTY_COLOR: Record<string, string> = {
 
 export const ResourceCard: React.FC<ResourceCardProps> = ({ category, resources }) => {
     return (
-        <div className="flex-shrink-0 w-[450px] bg-[#0a0a1a] border border-white/5 rounded-2xl p-5 hover:border-cyan-500/30 transition-all group flex flex-col h-[400px] overflow-hidden">
-            <div className="flex items-center justify-between mb-4">
-                <div className="space-y-0.5">
-                    <h3 className="text-lg font-black text-white tracking-tight uppercase">{category}</h3>
-                    <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest">{resources.length} Available Items</p>
+        <div className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-all group flex flex-col h-[450px] shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 overflow-hidden">
+            <div className="flex items-center justify-between mb-6">
+                <div className="space-y-1">
+                    <h3 className="text-lg font-black text-slate-900 dark:text-white tracking-tight uppercase">{category}</h3>
+                    <p className="text-[10px] text-slate-500 dark:text-slate-500 font-bold uppercase tracking-widest">{resources.length} Selected Items</p>
                 </div>
-                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-cyan-500/10 transition-colors">
-                    <span className="text-cyan-400 text-xs">★</span>
+                <div className="w-10 h-10 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                    <User size={18} className="text-slate-400 dark:text-slate-500 group-hover:text-white" />
                 </div>
             </div>
 
-            <div className="space-y-3 flex-1 overflow-y-auto no-scrollbar pr-1">
+            <div className="space-y-3 flex-1 overflow-y-auto no-scrollbar pr-1 scroll-smooth">
                 {resources.map((res, i) => (
                     <a
                         key={i}
                         href={res.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-col gap-2 p-3.5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.05] transition-all group/link"
+                        className="flex flex-col gap-3 p-4 rounded-2xl bg-slate-50/50 dark:bg-white/[0.02] border border-slate-100 dark:border-white/5 hover:border-indigo-500/30 dark:hover:border-indigo-500/30 hover:bg-white dark:hover:bg-white/[0.05] transition-all group/link shadow-sm hover:shadow-md"
                     >
                         <div className="flex items-start justify-between gap-3">
-                            <span className="text-sm font-bold text-gray-200 group-hover/link:text-cyan-400 transition-colors leading-snug">
+                            <span className="text-sm font-bold text-slate-800 dark:text-slate-200 group-hover/link:text-indigo-600 dark:group-hover/link:text-indigo-400 transition-colors leading-snug">
                                 {res.title}
                             </span>
-                            <div className={`p-1 rounded-md bg-white/5 text-gray-500 group-hover/link:text-cyan-400 group-hover/link:bg-cyan-400/10 transition-all`}>
-                                {TYPE_ICON[res.type] || <FileText size={12} />}
+                            <div className="p-2 rounded-xl bg-white dark:bg-slate-800 text-slate-400 dark:text-slate-500 group-hover/link:text-indigo-600 dark:group-hover/link:text-indigo-400 transition-all border border-slate-100 dark:border-slate-700">
+                                {TYPE_ICON[res.type] || <FileText size={14} />}
                             </div>
                         </div>
 
                         <div className="flex items-center gap-3">
-                            <div className="flex items-center gap-1.5 text-[10px] text-gray-500 font-bold uppercase tracking-wider bg-white/5 px-2 py-1 rounded-md">
-                                <User size={10} className="text-gray-500" />
+                            <div className="flex items-center gap-1.5 text-[9px] text-slate-500 font-bold uppercase tracking-wider bg-slate-100 dark:bg-white/5 px-2.5 py-1.5 rounded-lg">
                                 <span>{res.author}</span>
                             </div>
 
-                            <span className={`text-[9px] font-black uppercase tracking-tighter px-2 py-1 rounded-md ${DIFFICULTY_COLOR[res.difficulty] || 'text-gray-400 bg-gray-400/10'}`}>
-                                {res.difficulty}
-                            </span>
-
-                            <span className="text-[9px] text-gray-600 font-bold uppercase ml-auto">
+                            <span className="text-[9px] text-slate-400 dark:text-slate-600 font-bold uppercase ml-auto tracking-widest">
                                 {res.type.replace('_', ' ')}
                             </span>
                         </div>
@@ -79,9 +74,9 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({ category, resources 
                 ))}
             </div>
 
-            <div className="mt-4 flex items-center gap-3">
-                <button className="flex-1 py-2.5 rounded-xl bg-white/5 text-gray-500 text-[10px] font-black uppercase tracking-widest hover:bg-white/10 hover:text-white transition-all border border-white/5 italic">
-                    Load More
+            <div className="mt-6">
+                <button className="w-full py-3 rounded-2xl bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-black uppercase tracking-widest hover:bg-indigo-600 hover:text-white transition-all border border-slate-100 dark:border-slate-800">
+                    Explore All
                 </button>
             </div>
         </div>

@@ -57,7 +57,7 @@ This monorepo is managed by **Turbo** and uses **pnpm**.
    Update `packages/database/.env` with your `DATABASE_URL`.
 3. **Database Initialization**:
    ```bash
-   pnpm --filter @repo/database db:push
+   pnpm --filter @repo/database db:migrate
    pnpm --filter @repo/database db:seed
    ```
 4. **Start Development**:
